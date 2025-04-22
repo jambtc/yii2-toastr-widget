@@ -1,0 +1,25 @@
+{
+    "name": "jambtc/yii2-toastr-widget",
+    "description": "Un widget Yii2 per flash messages usando Toastr",
+    "type": "yii2-extension",
+    "keywords": ["yii2", "widget", "toastr", "notifications"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "jambtc",
+            "email": "jambtc@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.4",
+        "yiisoft/yii2": "~2.0.0",
+        "bower-asset/toastr": "^2.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "jambtc\\ToastrWidget\\": "src/"
+        }
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}
