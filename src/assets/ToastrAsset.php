@@ -13,7 +13,6 @@ class ToastrAsset extends AssetBundle
         'position' => \yii\web\View::POS_HEAD, // <-- questa è la chiave
     ];
     public $depends = [
-        'yii\web\YiiAsset',
-        'yii\bootstrap5\BootstrapAsset', // o Bootstrap5, in base a cosa usi
+        'yii\web\YiiAsset'
     ];
 }
