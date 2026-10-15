@@ -8,11 +8,11 @@ use yii\base\Widget;
 class Toast extends Widget
 {
     /**
-     * @var array Toastr message types
+     * @var array tipo di flash Yii => metodo Toastr (Toastr non ha "danger": diventa "error")
      */
     public $toastTypes = [
         'error'   => 'error',
-        'danger'  => 'danger',
+        'danger'  => 'error',
         'success' => 'success',
         'info'    => 'info',
         'warning' => 'warning',
@@ -60,7 +60,7 @@ class Toast extends Widget
             $this->getView()->registerJs(implode("\n", $script), \yii\web\View::POS_READY);
         }
 
-        // Registra l'asset Toastr (assicurati che sia già stato incluso nel progetto via Bower)
+        // Registra l'asset Toastr (pacchetto npm-asset/toastr)
         \jambtc\ToastrWidget\assets\ToastrAsset::register($this->getView());
     }
 }

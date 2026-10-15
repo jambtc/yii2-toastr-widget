@@ -16,15 +16,23 @@ Puoi installarlo facilmente tramite [Composer](https://getcomposer.org/):
 composer require jambtc/yii2-toastr-widget
 ```
 
-Assicurati che il tuo progetto Yii2 supporti l’installazione di pacchetti bower-asset/*. Se non funziona, aggiungi nel composer.json principale:
+Toastr arriva come pacchetto `npm-asset/toastr` (versione 2.1.4, compatibile con jQuery 3).
+Il progetto Yii2 deve poter installare i pacchetti `npm-asset/*`: con il template base
+di Yii2 basta il repository [asset-packagist](https://asset-packagist.org) nel `composer.json`:
 
 ```json
-"config": {
-    "fxp-asset": {
-        "enabled": true
+"repositories": [
+    {
+        "type": "composer",
+        "url": "https://asset-packagist.org"
     }
-}
+]
 ```
+
+### Novità 1.1.0
+
+- Toastr da `npm-asset/toastr` 2.1.4 invece di `bower-asset/toastr` 2.1.3: niente più blocco su jQuery < 3.
+- I flash di tipo `danger` vengono mostrati come `error` (prima chiamavano `toastr.danger`, che non esiste).
 
 ## Configurazione
 
