@@ -10,8 +10,9 @@ class ToastrAsset extends AssetBundle
     public $sourcePath = '@npm/toastr/build';
     public $css = ['toastr.min.css'];
     public $js = ['toastr.min.js'];
+    // in fondo alla pagina: con POS_HEAD Yii sposterebbe anche jQuery nell'<head> (le chiamate sono in POS_READY)
     public $jsOptions = [
-        'position' => \yii\web\View::POS_HEAD, // <-- questa è la chiave
+        'position' => \yii\web\View::POS_END,
     ];
     public $depends = [
         'yii\web\YiiAsset',
